@@ -11,7 +11,7 @@ lastcomand=''
 date_time_string = datetime.datetime.now().strftime('[%Y-%m-%d %H:%M:%S]')
 while True:
     time.sleep(3)
-    messages = api.messages.get()
+    
     commands = ['Привет', 'Как погода?', 'Привет', 'спокойной ночи', 'Что это за программа?', 'Что это за программа?', 'как погода?', 'привет']
     messages = [(m['uid'], m['mid'], m['body'])
                 for m in messages[1:] if m['body'] in commands and m['read_state'] == 0]
